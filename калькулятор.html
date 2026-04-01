@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ULTRA Бюджет</title>
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__content">
+      <p class="tag">Личный финансовый помощник</p>
+      <h1>ULTRA Бюджет</h1>
+      <p class="subtitle">
+        Простой сервис для учёта доходов, расходов, накоплений и долгов.
+        Начните за 1 минуту и держите бюджет под контролем.
+      </p>
+      <a href="#tracker" class="cta">Начать планирование</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="features">
+      <article class="feature-card">
+        <h3>Гибкий учёт</h3>
+        <p>Добавляйте любые категории расходов и редактируйте их в пару кликов.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Наглядная аналитика</h3>
+        <p>Смотрите распределение трат по круговой диаграмме в реальном времени.</p>
+      </article>
+      <article class="feature-card">
+        <h3>Умные подсказки</h3>
+        <p>Получайте советы по балансу и норме накоплений на каждый месяц.</p>
+      </article>
+    </section>
+
+    <section id="tracker">
+      <div id="login" class="card">
+        <h2>Вход в трекер</h2>
+        <p class="hint">При первом входе пароль будет сохранён локально в вашем браузере.</p>
+        <div class="inline-row">
+          <input type="password" id="password" placeholder="Введите пароль">
+          <button id="login-btn" type="button">Войти</button>
+        </div>
+      </div>
+
+      <div id="app" class="hidden">
+        <div class="card">
+          <h2>Месяц</h2>
+          <input type="month" id="month">
+        </div>
+
+        <div class="card">
+          <h2>Доход</h2>
+          <input type="number" id="income" placeholder="Введите сумму">
+        </div>
+
+        <div class="card">
+          <div class="space-between">
+            <h2>Расходы</h2>
+            <button id="add-expense-btn" type="button">+ Категория</button>
+          </div>
+          <div id="expenses"></div>
+        </div>
+
+        <div class="card grid-two">
+          <div>
+            <h2>Накопления</h2>
+            <input type="number" id="savings" placeholder="Введите сумму">
+          </div>
+          <div>
+            <h2>Долги</h2>
+            <input type="number" id="debts" placeholder="Введите сумму">
+          </div>
+        </div>
+
+        <div class="card">
+          <canvas id="chart"></canvas>
+        </div>
+
+        <div class="card">
+          <div id="result" class="result"></div>
+          <div id="advice" class="advice"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>ULTRA Бюджет • Ваши данные хранятся только в браузере</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
